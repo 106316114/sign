@@ -1,1 +1,40 @@
-# sign
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+greetHTML: function(selector, formal) {
+    if (!$) throw "jQuery not loaded";
+
+    if (!selector) throw "no seletor";
+
+    let msg = "";
+
+    if (formal) {
+        msg = this.formalGreeting();
+    } else {
+        msg = this.greeting();
+    };
+
+    $(selector).html(msg);
+
+    return this;
+
+}
+<title>With My Life</title>
+</head>
+<body>
+ <div id="app">
+  <div id="login">
+   <select id='Lang'>
+    <option value="en" selected>English</option>
+    <option value="zh">中文</option>
+   </select>
+   <button>登入</button>
+  </div>
+  <h1 id="logMsg"></h1>
+ </div>
+ 
+    <script src="jquery-3.1.1.js"></script>
+    <script src="greetr.js"></script>
+    <script src="app.js"></script>
+</body>
